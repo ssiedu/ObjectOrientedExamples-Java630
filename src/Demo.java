@@ -1,10 +1,21 @@
 
 public class Demo {
+    
+    int x, y;   //non-static
+    
+    public void display(){
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println("_______________");
+    }
+    
     public static void main(String[] args) {
 
-        String s1="abcd";
-        System.out.println(s1);
-        String s2=s1.toUpperCase();
-        System.out.println(s2);
+            Demo d1=new Demo();
+            Demo d2=new Demo();
+            d1.x=10; d1.y=20;
+            d2.x=30; d2.y=40;
+            d1.display();
+            
     }
 }
