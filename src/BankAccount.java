@@ -3,11 +3,17 @@ public class BankAccount {
     private String name;
     private int balance;
     private static int totalDeposits;
-
-    public void showTotal(){
+                              
+    public static void showAvg(BankAccount p1, BankAccount p2, BankAccount p3){
+        System.out.println((p1.balance+p2.balance+p3.balance)/3);
+    }
+    public void showBalance(){
+        System.out.println("Balance : "+balance);
+    }
+    public static void showTotal(){
         System.out.println("Total Deposits : "+totalDeposits);
     }
-    public void deposit(int amount){
+    public  void deposit(int amount){
         balance=balance+amount;
         totalDeposits=totalDeposits+amount;
     }
@@ -18,14 +24,8 @@ public class BankAccount {
         System.out.println("__________________________________");
     }
     
-    public void withdraw(int amount){
-        if(balance>=amount){
-            System.out.println("Withdraw Allowed");
-        }else{
-            System.out.println("Insufficient Balance");
-        }
-    }
-    public void setData(int a, String b, int c){
+   
+    public  void setData(int a, String b, int c){
         ano=a;
         name=b;
         balance=c;

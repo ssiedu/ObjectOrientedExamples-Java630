@@ -8,25 +8,22 @@ public class BankingApp {
         ac2.setData(112,"BBB",20000);
         ac3.setData(113,"CCC",30000);
         ac1.showData();
-        ac1.deposit(5000);
-        ac1.showData();
-        ac2.showData();
-        ac2.deposit(4000);
-        ac2.showData();
-        ac1.showTotal();
-        ac2.showTotal();
-        ac3.showTotal();
-        
-        /*
-        System.out.println("Showing Account Details :");
-        System.out.println("__________________________________");
-        ac1.showData();
         ac2.showData();
         ac3.showData();
-        System.out.println("Account 111 Is Trying To Withdraw 15000");
-        System.out.println("______________________________________________");
-        ac1.withdraw(15000);
-        */
+        
+        ac1.showBalance();
+        ac2.showBalance();
+        ac3.showBalance();
+        //BankAccount.showBalance(ac1);
+        //BankAccount.showBalance(ac2);
+        //BankAccount.showBalance(ac3);
+        //ac1.deposit(5000);
+        //ac2.deposit(2000);
+        //BankAccount.showTotal();
+        
+        //we want to find the avg balance of ac1,ac2
+        BankAccount.showAvg(ac1,ac2,ac3);
+        
         
     }
 }
