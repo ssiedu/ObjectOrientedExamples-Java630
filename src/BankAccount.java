@@ -3,9 +3,15 @@ public class BankAccount {
     private String name;
     private int balance;
     private static int totalDeposits;
-                              
+    
+    public static void showAvg(BankAccount p1, BankAccount p2){
+        System.out.println("Avg of 2 : "+(p1.balance+p2.balance)/2);
+    }                          
     public static void showAvg(BankAccount p1, BankAccount p2, BankAccount p3){
-        System.out.println((p1.balance+p2.balance+p3.balance)/3);
+        System.out.println("Avg of 3 : "+(p1.balance+p2.balance+p3.balance)/3);
+    }
+    public static void showAvg(BankAccount p1, BankAccount p2, BankAccount p3, BankAccount p4){
+        System.out.println("Avg of 4 : "+(p1.balance+p2.balance+p3.balance+p4.balance)/4);
     }
     public void showBalance(){
         System.out.println("Balance : "+balance);
