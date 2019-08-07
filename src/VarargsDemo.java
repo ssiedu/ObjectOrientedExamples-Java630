@@ -1,8 +1,18 @@
 
 public class VarargsDemo {
-
-    public static void show(String...s){
-        
+    
+    public static void add(){
+        System.out.println("NOTHING-TO-ADD");
+    }
+    public static void add(double a, double b){
+        System.out.println("SUM  : "+(a+b));
+    }
+    public static void add(String...v){
+        String s="";
+        for(String tmp:v){
+            s=s+tmp;
+        }
+        System.out.println(s);
     }
     public static void add(int...v){
         int sum=0;
@@ -14,18 +24,24 @@ public class VarargsDemo {
     }
     
     public static void main(String[] args) {
-        
-        show("indore");
-        show("indore","bhopal");
-        show("indore","bhopal","mumbai");
-        
-       int x[]={11,12};
-       int y[]={1,2,3};
-       add(x);
-       add(y);
+       
+       add();
+       add(10,20);
        add(1,2,3,4);
        add(1,2,3,4,5);
        add(1,2,3,4,5,6,7,8,9,10);
+       add("aa","bb");
+       add("xx","yy","zz");
         
     }
 }
+/*
+    1) only one varargs per method
+    2) non-varargs parameters are allowed with varargs
+    3) varargs must be always on last position.
+    4) varargs methods can be overloaded.
+    5) 
+
+
+
+*/
