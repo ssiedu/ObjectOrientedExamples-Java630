@@ -1,7 +1,7 @@
 public class Demo {
-    
+    Object obj;
     private int x, y;
-    
+   
     public Demo(){
         this(5);
         System.out.println("Zero Args");

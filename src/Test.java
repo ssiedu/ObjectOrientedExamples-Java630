@@ -2,13 +2,20 @@
 public class Test {
     
     int x, y, z;
-                            
-                   //10    20
+
+    void f1(){
+        
+    }
+    public Test(){
+        f1();
+    }
+
     public Test(int p, int q){
+        this();
         x=p;
         y=q;
     }
-                //10      20     30
+
     public Test(int a, int b, int c){
         this(a,b);
         z=c;
@@ -25,3 +32,17 @@ public class Test {
     }
 
 }
+/*
+    some rules for using this keyword
+    ------------------------------------
+    1) matching constructor must exists.
+    2) this must be the first statement of constructor.
+    3) we cant call more than one constructor directly.
+    4) chaining is allowed.
+    5) recursive calls are not allowed.
+    6) only a constructor can call another constructor.
+        (you cant call them inside a method)
+    7) a constructor can call a method.
+
+
+*/
