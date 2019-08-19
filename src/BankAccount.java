@@ -3,6 +3,17 @@ public class BankAccount {
     private String name;
     private int balance;
     private static int totalDeposits;
+
+    public BankAccount(int a, String b, int c) {
+        this.ano = a;
+        this.name = b;
+        this.balance = c;
+    }
+
+    public BankAccount() {
+    }
+    
+    
     
     
     public static void show(BankAccount...account){
